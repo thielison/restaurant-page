@@ -16,6 +16,7 @@ body {
     height: 100%;
 }
 
+/* FIXED ELEMENTS */
 #content .nav {
     display: flex;
     align-items: center;
@@ -25,6 +26,15 @@ body {
     border-bottom: 1px solid black;
 }
 
+#content footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+/* HOME PAGE ELEMENTS */
 #content .middle-content {
     display: flex;
     flex-direction: column;
@@ -32,10 +42,10 @@ body {
     text-align: center;
 }
 
-#content footer {
+/* CONTACT PAGE ELEMENTS */
+#content .contact-section {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    border-top: 1px solid black;
-    width: 100%;
+    gap: 10rem;
 }

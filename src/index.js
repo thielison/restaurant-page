@@ -50,13 +50,19 @@ const createHeadline = () => {
     headLine.classList.add("middle-content");
 
     const para1 = document.createElement("p");
-    const h1 = document.createElement("h1");
-    const para2 = document.createElement("p");
     para1.textContent = "Welcome";
-    h1.textContent = "LA BRASILIANA";
-    para2.textContent = "Some copy text goes here";
 
-    headLine.append(para1, h1, para2);
+    const h1 = document.createElement("h1");
+    h1.textContent = "LA BRASILIANA";
+
+    const para2 = document.createElement("p");
+    para2.textContent = "Experience the finest pizza in your country, right here!";
+
+    const button = document.createElement("button");
+    button.textContent = "VIEW OUR MENU";
+    button.setAttribute("type", "button");
+
+    headLine.append(para1, h1, para2, button);
 
     return headLine;
 };

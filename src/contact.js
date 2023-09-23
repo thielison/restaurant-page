@@ -1,6 +1,6 @@
 import Image from "./images/maps-address.png";
 
-const createAddressDiv = () => {
+const createContactSection = () => {
     const contactSection = document.createElement("section");
     contactSection.classList.add("contact-section");
 
@@ -25,4 +25,4 @@ const createAddressDiv = () => {
     return contactSection;
 };
 
-export { createAddressDiv };
+export { createContactSection };

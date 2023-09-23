@@ -2,7 +2,8 @@
   --primary-font: 'Montserrat', sans-serif;
   --primary-color: #ffffff;
   --secondary-color: #ff9f1c;
-  --bg-color: rgba(0, 0, 0, 0.700);
+  --main-bg-color: rgba(0, 0, 0, 0.3);
+  --nav-footer-bg-color: rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -36,7 +37,7 @@ body {
     width: 100%;
     gap: 2rem;
     border-bottom: 2px solid var(--primary-color);
-    background-color: var(--bg-color);
+    background-color: var(--nav-footer-bg-color);
 }
 
 #content .nav a {
@@ -59,17 +60,22 @@ body {
     align-items: center;
     justify-content: center;
     border-top: 2px solid var(--primary-color);
-    background-color: var(--bg-color);
+    background-color: var(--nav-footer-bg-color);
     width: 100%;
 }
 
-/* HOME PAGE ELEMENTS */
-.home-page {
+/* MAIN CONTENT STYLES */
+.home-page, .menu-page, .contact-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.300);
+    background-color: var(--main-bg-color);
+}
+
+/* HOME PAGE ELEMENTS */
+.home-page {
+    
 }
 
 .home-page p:first-of-type {
@@ -100,17 +106,12 @@ body {
 
 .home-page button:hover {
     cursor: pointer;
-    background-color: #ec9721;
+    background-color: #d48517;
 }
+
+/* MENU PAGE ELEMENTS */
 
 /* CONTACT PAGE ELEMENTS */
-.contact-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.300);
-}
-
 .contact-page .address-field {
     display: flex;
     flex-direction: column;

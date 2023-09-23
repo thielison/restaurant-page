@@ -39,6 +39,21 @@ body {
     background-color: var(--bg-color);
 }
 
+#content .nav a {
+    color: var(--primary-color);
+    text-decoration: none; 
+    transition: margin-bottom 0.3s;
+}
+
+#content .nav a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+    text-decoration-color: var(--secondary-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 1rem;
+}
+
 #content footer {
     display: flex;
     align-items: center;

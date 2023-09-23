@@ -1,4 +1,4 @@
-import { createContactInfoSection } from "./contact";
+import { createAddressDiv } from "./contact";
 import "./style.css";
 
 const createNav = () => {
@@ -79,7 +79,7 @@ const changePage = (navLink) => {
     }
     if (navLink.textContent === "CONTACT") {
         console.log("CONTACT");
-        document.getElementById("content").append(createNav(), createContactInfoSection(), createFooter());
+        document.getElementById("content").append(createNav(), createAddressDiv(), createFooter());
     }
 };
 

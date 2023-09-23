@@ -1,22 +1,23 @@
 import { createContactPage } from "./contact";
 import "./style.css";
 
+const main = document.createElement("main");
+
 const createNav = () => {
     const nav = document.createElement("nav");
     nav.classList.add("nav");
 
     const homeLink = document.createElement("a");
-    homeLink.href = "/dist/index.html";
     homeLink.textContent = "HOME";
-    homeLink.classList.add("nav-link");
+    homeLink.classList.add("home-link");
 
     const menuLink = document.createElement("a");
     menuLink.textContent = "MENU";
-    menuLink.classList.add("nav-link");
+    menuLink.classList.add("menu-link");
 
     const contactLink = document.createElement("a");
     contactLink.textContent = "CONTACT";
-    contactLink.classList.add("nav-link");
+    contactLink.classList.add("contact-link");
 
     nav.append(homeLink, menuLink, contactLink);
 
@@ -45,8 +46,7 @@ const createFooter = () => {
     return footer;
 };
 
-const createHeadline = () => {
-    const main = document.createElement("main");
+const createHomePageHeadline = () => {
     main.classList.add("home-page");
 
     const para1 = document.createElement("p");
@@ -68,24 +68,25 @@ const createHeadline = () => {
 };
 
 const changePage = (navLink) => {
-    document.getElementById("content").textContent = "";
+    const main = document.querySelector("main");
+    main.textContent = "";
+    main.className = "";
 
-    if (navLink.textContent === "HOME") {
-        document.getElementById("content").append(createNav(), createHeadline(), createFooter());
-    }
-    if (navLink.textContent === "MENU") {
-        console.log("MENU");
-    }
-    if (navLink.textContent === "CONTACT") {
-        console.log("CONTACT");
-        document.getElementById("content").append(createNav(), createContactPage(), createFooter());
+    if (navLink.className === "home-link") {
+        main.className = "home-page";
+        main.appendChild(createHomePageHeadline());
+    } else if (navLink.className === "menu-link") {
+        main.className = "menu-page";
+        main.appendChild(createMenuPage());
+        return;
+    } else if (navLink.className === "contact-link") {
+        main.className = "contact-page";
+        main.appendChild(createContactPage());
     }
 };
 
-document.getElementById("content").append(createNav(), createHeadline(), createFooter()); // Initialize home page
+document.getElementById("content").append(createNav(), createHomePageHeadline(), createFooter()); // Initialize home page
 
-document.querySelectorAll(".nav-link").forEach((link) => {
-    link.addEventListener("click", (e) => {
-        changePage(e.target);
-    });
-});
+document.querySelector(".home-link").addEventListener("click", (e) => changePage(e.target));
+document.querySelector(".menu-link").addEventListener("click", (e) => changePage(e.target));
+document.querySelector(".contact-link").addEventListener("click", (e) => changePage(e.target));

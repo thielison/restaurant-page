@@ -1,9 +1,6 @@
 import Image from "./images/maps-address.png";
 
 const createContactPage = () => {
-    const main = document.createElement("main");
-    main.classList.add("contact-page");
-
     const addressFieldDiv = document.createElement("div");
     addressFieldDiv.classList.add("address-field");
 
@@ -20,9 +17,7 @@ const createContactPage = () => {
 
     addressFieldDiv.append(h1, para, mapsImg);
 
-    main.append(addressFieldDiv);
-
-    return main;
+    return addressFieldDiv;
 };
 
 export { createContactPage };

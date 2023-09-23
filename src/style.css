@@ -74,10 +74,6 @@ body {
 }
 
 /* HOME PAGE ELEMENTS */
-.home-page {
-    
-}
-
 .home-page p:first-of-type {
     font-family: 'Herr Von Muellerhoff', cursive;
     color: var(--secondary-color);

@@ -1,4 +1,4 @@
-import { createContactSection } from "./contact";
+import { createContactPage } from "./contact";
 import "./style.css";
 
 const createNav = () => {
@@ -46,8 +46,8 @@ const createFooter = () => {
 };
 
 const createHeadline = () => {
-    const headLine = document.createElement("section");
-    headLine.classList.add("middle-content");
+    const main = document.createElement("main");
+    main.classList.add("home-page");
 
     const para1 = document.createElement("p");
     para1.textContent = "Welcome";
@@ -62,16 +62,15 @@ const createHeadline = () => {
     button.textContent = "VIEW OUR MENU";
     button.setAttribute("type", "button");
 
-    headLine.append(para1, h1, para2, button);
+    main.append(para1, h1, para2, button);
 
-    return headLine;
+    return main;
 };
 
 const changePage = (navLink) => {
     document.getElementById("content").textContent = "";
 
     if (navLink.textContent === "HOME") {
-        console.log("HOME");
         document.getElementById("content").append(createNav(), createHeadline(), createFooter());
     }
     if (navLink.textContent === "MENU") {
@@ -79,7 +78,7 @@ const changePage = (navLink) => {
     }
     if (navLink.textContent === "CONTACT") {
         console.log("CONTACT");
-        document.getElementById("content").append(createNav(), createContactSection(), createFooter());
+        document.getElementById("content").append(createNav(), createContactPage(), createFooter());
     }
 };
 

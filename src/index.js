@@ -1,4 +1,5 @@
 import { createContactPage } from "./contact";
+import { createMenuPage } from "./menu";
 import "./style.css";
 
 const main = document.createElement("main");
@@ -78,7 +79,6 @@ const changePage = (navLink) => {
     } else if (navLink.className === "menu-link") {
         main.className = "menu-page";
         main.appendChild(createMenuPage());
-        return;
     } else if (navLink.className === "contact-link") {
         main.className = "contact-page";
         main.appendChild(createContactPage());

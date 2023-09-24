@@ -74,8 +74,7 @@ const changePage = (navLink) => {
     main.className = "";
 
     if (navLink.className === "home-link") {
-        main.className = "home-page";
-        main.appendChild(createHomePageHeadline());
+        createHomePageHeadline();
     } else if (navLink.className === "menu-link") {
         main.className = "menu-page";
         main.appendChild(createMenuPage());

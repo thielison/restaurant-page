@@ -61,24 +61,26 @@ const createHomePageHeadline = () => {
 
     const button = document.createElement("button");
     button.textContent = "VIEW OUR MENU";
+    button.classList.add("menu-button");
     button.setAttribute("type", "button");
+    button.addEventListener("click", (e) => changePage(e.target));
 
     main.append(para1, h1, para2, button);
 
     return main;
 };
 
-const changePage = (navLink) => {
+const changePage = (pageNavigationElement) => {
     const main = document.querySelector("main");
     main.textContent = "";
     main.className = "";
 
-    if (navLink.className === "home-link") {
+    if (pageNavigationElement.className === "home-link") {
         createHomePageHeadline();
-    } else if (navLink.className === "menu-link") {
+    } else if (pageNavigationElement.className === "menu-link" || pageNavigationElement.className === "menu-button") {
         main.className = "menu-page";
         main.appendChild(createMenuPage());
-    } else if (navLink.className === "contact-link") {
+    } else if (pageNavigationElement.className === "contact-link") {
         main.className = "contact-page";
         main.appendChild(createContactPage());
     }

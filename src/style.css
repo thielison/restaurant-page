@@ -52,8 +52,6 @@ body {
     gap: 2rem;
     border-bottom: 2px solid var(--primary-color);
     background-color: var(--nav-footer-bg-color);
-    /* position: sticky;
-    top: 0; */
 }
 
 #content .nav a {
@@ -149,6 +147,11 @@ body {
     height: 300px;
     background-color: var(--nav-footer-bg-color);
     border-radius: 1rem;
+}
+
+.pizza-card:hover {
+    cursor: pointer;
+    background-color: rgba(76, 76, 76, 0.6);
 }
 
 .pizza-card img {

@@ -35,10 +35,9 @@ const createFooter = () => {
     const link = document.createElement("a");
     link.href = "https://github.com/thielison";
 
-    const img = document.createElement("img");
-    img.id = "github-icon";
+    const img = new Image();
     img.src = githubIcon;
-    img.alt = "github icon";
+    img.id = "github-icon";
 
     link.appendChild(img);
     para.appendChild(link);

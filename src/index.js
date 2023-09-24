@@ -1,5 +1,6 @@
 import { createContactPage } from "./contact";
 import { createMenuPage } from "./menu";
+import githubIcon from "./images/github-icon.png";
 import "./style.css";
 
 const main = document.createElement("main");
@@ -35,9 +36,9 @@ const createFooter = () => {
     link.href = "https://github.com/thielison";
 
     const img = document.createElement("img");
-    // img.id = "github-symbol";
-    // img.src = "images/github-mark.png";
-    // img.alt = "github icon";
+    img.id = "github-icon";
+    img.src = githubIcon;
+    img.alt = "github icon";
 
     link.appendChild(img);
     para.appendChild(link);
